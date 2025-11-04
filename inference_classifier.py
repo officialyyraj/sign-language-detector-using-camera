@@ -18,7 +18,7 @@ mp_drawing_styles = mp.solutions.drawing_styles
 
 hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
-labels_dict = {0: 'A', 1: 'B', 2: 'C'}
+labels_dict = {0: 'A', 1: 'B', 2: 'C', 3: 'F', 4: 'V'}  # Adjust according to your classes
 while True:
 
     data_aux = []
@@ -73,8 +73,12 @@ while True:
                     cv2.LINE_AA)
 
     cv2.imshow('frame', frame)
-    cv2.waitKey(1)
+    # Check for 'q' key press to request quit
+    key = cv2.waitKey(1) & 0xFF
+    if key == ord('q'):
+        break
 
 
+# Release the camera and close windows when exiting the loop
 cap.release()
 cv2.destroyAllWindows()
