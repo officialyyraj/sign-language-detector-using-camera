@@ -92,5 +92,5 @@ Once installed, you can run it anytime — no setup needed again.
 
 ---
 
-Made with ❤️ by Piyush Raj  and Anvay Sharma
+Made with ❤️ by Piyush Raj 
 (For the DSD Sign Language Project @ VIT Vellore)
